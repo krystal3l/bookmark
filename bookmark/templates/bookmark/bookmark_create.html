@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Bookmark Add{% endblock %}
+
+{% block content %}
+    <form action="" method="post"> <!-- action메서드 : 자료를 전달할 대상 페이지. 공백 시 현재 페이지로 전달-->
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Add" class="btn btn-info btn-sm">
+    </form>
+{% endblock %}
